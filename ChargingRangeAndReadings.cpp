@@ -7,7 +7,7 @@ TEST_CASE("Checks the charging current range and its readings") {
 	int chargingCurrentSamples[] = {4,5};
 	const char* expectedRangeAndOccurences = "4-5, 2";
 	char* rangeAndOccurences;
-	rangeAndOccurences = interpretChargingCurrentRangeAndOccurences(chargingCurrentSamples);
+	rangeAndOccurences = ChargingRangeAndReadings(chargingCurrentSamples);
 	REQUIRE(strcmp(rangeAndOccurences, expectedRangeAndOccurences) == 0);
 }
 
